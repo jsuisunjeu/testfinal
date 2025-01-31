@@ -9,23 +9,25 @@
         html, body {
             margin: 0;
             padding: 0;
-            height: 970;
-            width: 1600;
+            height: 100%;  /* Mettre la hauteur à 100% pour le corps du document */
+            width: 100%;   /* Mettre la largeur à 100% pour le corps du document */
         }
 
         /* Conteneur d'image prenant toute la largeur */
         .image-container {
-            width: 1600;
-            height: 970;
+            width: 100%;  /* Prendre toute la largeur disponible */
+            height: 100%; /* Prendre toute la hauteur disponible */
             display: block;
+            overflow: hidden; /* Eviter les débordements d'image */
         }
 
         /* Image sans marges et bordures */
         .image-container img {
-            width: 1600;  /* Prendre 100% de la largeur du conteneur */
-            height: 970; /* Conserver la proportion de l'image */
+            width: 100%;  /* Prendre 100% de la largeur du conteneur */
+            height: 100%; /* Conserver la proportion de l'image */
             display: block; /* Éviter les espaces blancs */
             border: none;  /* Aucune bordure autour de l'image */
+            object-fit: cover; /* Couvre le conteneur sans déformation */
         }
     </style>
 </head>
@@ -37,4 +39,3 @@
     </div>
 </body>
 </html>
-
